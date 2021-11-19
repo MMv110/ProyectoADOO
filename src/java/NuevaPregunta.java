@@ -12,7 +12,7 @@ public class NuevaPregunta extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String nombre = request.getParameter("Nombre");
+        String nombre = request.getParameter("nombre");
         String pregunta = request.getParameter("pregunta");
         int respuesta = Integer.parseInt(request.getParameter("respuesta"));
         String opcion1 = request.getParameter("opcion1");
@@ -22,7 +22,7 @@ public class NuevaPregunta extends HttpServlet {
         
         Pregunta p = new Pregunta(0,nombre,pregunta,respuesta,opcion1,opcion2,opcion3,opcion4);
         p.crearPregunta();
-        response.sendRedirect("/");
+        response.sendRedirect("/ProyectoTriangulo");
         
     }
 

@@ -19,13 +19,13 @@ public class Crud {
             
             PreparedStatement ps = con.prepareStatement("Insert into Preguntas values (?,?,?,?,?,?,?,?)");
             ps.setNull(1, 0);
-            ps.setString(1, p.getNombre());
-            ps.setString(2, p.getPregunta());
-            ps.setInt(3, p.getRespuesta());
-            ps.setString(4, p.getOpcion1());
-            ps.setString(5, p.getOpcion2());
-            ps.setString(6, p.getOpcion3());
-            ps.setString(7, p.getOpcion4());
+            ps.setString(2, p.getNombre());
+            ps.setString(3, p.getPregunta());
+            ps.setInt(4, p.getRespuesta());
+            ps.setString(5, p.getOpcion1());
+            ps.setString(6, p.getOpcion2());
+            ps.setString(7, p.getOpcion3());
+            ps.setString(8, p.getOpcion4());
             
             ps.executeUpdate();
             

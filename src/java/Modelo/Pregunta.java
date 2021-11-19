@@ -23,7 +23,8 @@ public class Pregunta {
         this.opcion4 = opcion4;
     }
 
-    public Pregunta() {
+    public Pregunta(int id) {
+        this.id = id;
     }
 
     public int getId() {

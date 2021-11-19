@@ -14,9 +14,10 @@ public class BorrarPregunta extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             
             int id = Integer.parseInt(request.getParameter("id"));
-            Pregunta p = new Pregunta();
+            Pregunta p = new Pregunta(id);
+            System.out.println(request.getRequestURI());
             p.deletePregunta();
-            response.sendRedirect("/");
+            response.sendRedirect("/ProyectoTriangulo");
         }
     }
 
